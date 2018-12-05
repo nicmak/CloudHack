@@ -101,6 +101,25 @@ class App extends Component {
                 onChange={this.setChoice}
               />
             </Box>
+            {this.state.activeClick === "oneYear" && (
+            <div>
+              {this.state.year === "2006" && 
+                (<div>
+                <p>Data to go here for 2006</p>
+              </div>)
+              }
+              {this.state.year === "2016" && 
+              (<div>
+                <p>Data to go here  for 2016</p>
+              </div>)}
+            </div>)
+            }
+            {this.state.activeClick === "trends" && (
+              <div>
+                <p>Trends go here!</p>
+              </div>
+              )
+            }
           </div>
         </div>
         <div className="right-panel">
