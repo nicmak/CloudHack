@@ -807,6 +807,48 @@
     "@svgr/core" "^2.4.1"
     loader-utils "^1.1.0"
 
+"@tds/core-box@^1.0.1":
+  version "1.0.1"
+  resolved "http://registry.npmjs.org/@tds/core-box/-/core-box-1.0.1.tgz#23df7d3ac9691288010819864add8ff04f52b175"
+  dependencies:
+    prop-types "^15.5.10"
+
+"@tds/core-decorative-icon@^1.0.0":
+  version "1.0.0"
+  resolved "http://registry.npmjs.org/@tds/core-decorative-icon/-/core-decorative-icon-1.0.0.tgz#f07ef49bd5026b315b141cfdf19f8dd0b9c6f97f"
+  dependencies:
+    prop-types "^15.5.10"
+
+"@tds/core-input-feedback@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tds/core-input-feedback/-/core-input-feedback-1.0.2.tgz#834b8078823260150e398d9e4323efd3c1ca2973"
+  dependencies:
+    "@tds/core-box" "^1.0.1"
+    prop-types "^15.5.10"
+
+"@tds/core-paragraph@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tds/core-paragraph/-/core-paragraph-1.0.2.tgz#9aee98727fa9fc7e106580fb616848fa50c90f77"
+  dependencies:
+    prop-types "^15.5.10"
+
+"@tds/core-radio@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@tds/core-radio/-/core-radio-1.1.0.tgz#eaa9656056aa42d6d89db1f605bd961837ba07f0"
+  dependencies:
+    "@tds/core-box" "^1.0.1"
+    "@tds/core-decorative-icon" "^1.0.0"
+    "@tds/core-input-feedback" "^1.0.2"
+    "@tds/core-paragraph" "^1.0.2"
+    "@tds/core-text" "^1.0.2"
+    prop-types "^15.5.10"
+
+"@tds/core-text@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tds/core-text/-/core-text-1.0.2.tgz#3b725a3cbaa444d3e0b0cec42b03577ae72b66c5"
+  dependencies:
+    prop-types "^15.5.10"
+
 "@types/tapable@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.2.tgz#e13182e1b69871a422d7863e11a4a6f5b814a4bd"
@@ -7225,7 +7267,7 @@ prompts@^0.1.9:
     kleur "^2.0.1"
     sisteransi "^0.1.1"
 
-prop-types@^15.5.8, prop-types@^15.6.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:

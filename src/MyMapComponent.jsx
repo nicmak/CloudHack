@@ -10,8 +10,8 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/burnaby.kml"
     options={{ preserveViewport: true }}
-    onClick={() => console.log('Burnaby')}
-    onMouseEnter={() => console.log('Burnaby Color Change')}
+    onClick={() => console.log('click on kml')}
+    onMouseEnter={() => console.log('hover on kml')}
    />
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/n_van1.kml"
