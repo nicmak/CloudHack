@@ -67,7 +67,7 @@ class App extends Component {
         <div className="left-panel">
           <div className="padder">
             <h3>Housing patterns</h3>
-            <p>Radios to go here 2006 and 2016</p>
+            <p>Select a year to see a dataset:</p>
             <Box tag="fieldset" between={2}>
               <legend>
                 <Text bold size="medium">
