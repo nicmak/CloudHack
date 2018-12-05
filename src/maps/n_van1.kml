@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>n_van1.kml</name>
+	<Schema name="Gvrd" id="kml_schema_ft_Gvrd">
+		<SimpleField type="xsd:string" name="Name"></SimpleField>
+		<SimpleField type="xsd:string" name="Munnum"></SimpleField>
+	</Schema>
+	<Style id="kml_style_ft_Gvrd">
+		<LineStyle>
+			<color>ff005400</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f7eff00</color>
+		</PolyStyle>
+	</Style>
+	<Placemark id="kml_19">
+		<name>kml_19</name>
+		<snippet></snippet>
+		<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>Name</th>
+<td>City of North Vancouver</td>
+</tr><tr bgcolor="">
+<th>Munnum</th>
+<td>12</td>
+</tr></table></center>]]></description>
+		<styleUrl>#kml_style_ft_Gvrd</styleUrl>
+		<ExtendedData>
+			<SchemaData schemaUrl="#kml_schema_ft_Gvrd">
+				<SimpleData name="Name">City of North Vancouver</SimpleData>
+				<SimpleData name="Munnum">12</SimpleData>
+			</SchemaData>
+		</ExtendedData>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-123.102839057701,49.3010540942858,0 -123.102054539309,49.3008209159243,0 -123.066686680028,49.2976579569496,0 -123.038536181999,49.29572400763569,0 -123.038540551529,49.30132798587879,0 -123.038157271903,49.3132504785413,0 -123.054720045779,49.3134372185584,0 -123.054722432267,49.3155915497833,0 -123.054686365471,49.3187443565909,0 -123.054623980571,49.319490980841,0 -123.05466147981,49.32073678666299,0 -123.051784619296,49.3206841407711,0 -123.050726367511,49.32070260031159,0 -123.04086604943,49.3206300489083,0 -123.04070927552,49.3272467194498,0 -123.05321433386,49.3273516363618,0 -123.052999017775,49.3355456937667,0 -123.091231751636,49.3356275882043,0 -123.091252479445,49.3310175849766,0 -123.102237049191,49.331066858853,0 -123.102839057701,49.3010540942858,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>
