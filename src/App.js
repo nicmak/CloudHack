@@ -5,6 +5,8 @@ import Radio from '@tds/core-radio';
 import Box from '@tds/core-box';
 import Text from '@tds/core-text';
 import { Marker } from "react-google-maps"
+import ProgressChart from "./progress";
+import VerticalChart from './barchart';
 
 const googleMapsClient = require('@google/maps').createClient({
   key: 'AIzaSyBQh7wSDWnhc7DvtEMtAZKdgs-Idfjg4pA'
