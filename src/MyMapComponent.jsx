@@ -1,13 +1,18 @@
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker, KmlLayer } from "react-google-maps"
 import React from 'react';
+// {true && <Marker position={{ lat: 49.2832844, lng : -123.1248047 }}
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
     defaultZoom={8}
     defaultCenter={{ lat: 49.2832844, lng : -123.1248047}}
   >
-    {true && <Marker position={{ lat: -34.397, lng: 150.644 }}
-    /> }
+  <KmlLayer
+    url="http://wroms.whiterockcity.ca/opendata/GIS/Data/Spatial/Other/KML/GVRD.kmz"
+    options={{ preserveViewport: true }}
+    onClick={() => console.log('shit')}
+    onMouseEnter={() => console.log('hover shit')}
+   />
   </GoogleMap>
 ))
 
