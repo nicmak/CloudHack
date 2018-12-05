@@ -1,15 +1,16 @@
 import React from 'react';
-import { BarChart } from 'react-easy-chart';
+import { Line } from 'rc-progress';
 
-class ProgressChart extends React.Component {
+class VerticalChart extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+           percent: props.percent 
+        };
+    }
     render() {
-        return (
-            <BarChart data= {[
-                {x: 'Macondo', y: 24, color: '#283255'},
-                {x: 'Wonderland', y: 47, color: '#283255'},
-            ]}
-        />)
+        return (<Line percent={this.state.percent} strokeWidth="4" strokeColor="#283255"/>)
     }
 }
 
-export default ProgressChart;
+export default VerticalChart;
