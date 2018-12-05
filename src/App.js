@@ -18,9 +18,11 @@ class App extends Component {
     super(props);
     this.state = {
       addressResults: [],
-      year: "2006"
+      year: "2006",
+      activeClick: 'oneYear'
     };
     this.setChoice = this.setChoice.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   testClient = () => {
@@ -48,12 +50,18 @@ class App extends Component {
     // this.testClient();
   }
 
+  handleClick(activeClick) {
+    console.log('activeClick', activeClick);
+    this.setState({activeClick: activeClick});
+  }
+
   setChoice(e) {
     console.log('event', e.target.value);
     this.setState({year: e.target.value});
   }
 
   render() {
+    console.log('activeClick', this.state.activeClick);
     return (
       <div className="App">
         <div className="header">
@@ -68,6 +76,10 @@ class App extends Component {
         </div>
         <div className="left-panel">
           <div className="padder">
+            <div className="tabs">
+              <div value="oneYear" className={`tab-label one-year-label ${this.state.activeClick}`} onClick={() => this.handleClick("oneYear")}><p>One year</p></div>
+              <div value="trends" className={`tab-label trends-label ${this.state.activeClick}`} onClick={() => this.handleClick("trends")}><p>Trends</p></div>
+            </div>
             <h3>Housing patterns</h3>
             <p>Radios to go here 2006 and 2016</p>
             <Box tag="fieldset" between={2}>
