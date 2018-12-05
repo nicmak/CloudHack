@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import ReactMap from './MyMapComponent';
 import { Marker } from "react-google-maps"
-import { VerticalChart } from "./barchart";
+import ProgressChart from "./progress";
+import VerticalChart from './barchart';
 
 const googleMapsClient = require('@google/maps').createClient({
   key: 'AIzaSyBQh7wSDWnhc7DvtEMtAZKdgs-Idfjg4pA'
@@ -53,7 +54,7 @@ class App extends Component {
         </div>
         <div className="left-panel">
           <div>
-            <VerticalChart percent="60"/>
+            <ProgressChart percent="60"/>
           </div>
           <h3>Housing patterns</h3>
           <p>Radios to go here 2006 and 2016</p>
