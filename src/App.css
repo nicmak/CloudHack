@@ -104,7 +104,7 @@
 }
 
 .left-panel {
-  width: 60%;
+  width: 40%;
   float: left;
   text-align: left;
 }
@@ -114,8 +114,12 @@
 }
 
 .right-panel {
-  width: 40%;
+  width: 60%;
   float: right;
+}
+
+.data-panel {
+  margin-top: 20px;
 }
 
 .App-link {

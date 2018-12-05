@@ -106,19 +106,40 @@ class App extends Component {
             {this.state.activeClick === "oneYear" && (
             <div>
               {this.state.year === "2006" && 
-                (<div>
-                <p>Data to go here for 2006</p>
+                (<div className="data-panel">
+                <Box between={3}>
+                  <Text bold size="medium">Median household income</Text>
+                  <Text bold size="large">100,000k</Text>
+                  <Text bold size="medium">Segmentation by types</Text>
+                  <ProgressChart percent="60"/>
+                  <Text bold size="medium">Median price</Text>
+                  <VerticalChart />
+                </Box>
               </div>)
               }
               {this.state.year === "2016" && 
-              (<div>
-                <p>Data to go here  for 2016</p>
+              (<div className="data-panel">
+                <Box between={3}>
+                  <Text bold size="medium">Median household income</Text>
+                  <Text bold size="large">100,000k</Text>
+                  <Text bold size="medium">Segmentation by types</Text>
+                  <ProgressChart percent="60"/>
+                  <Text bold size="medium">Median price</Text>
+                  <VerticalChart />
+                </Box>
               </div>)}
             </div>)
             }
             {this.state.activeClick === "trends" && (
-              <div>
-                <p>Trends go here!</p>
+              <div className="data-panel">
+                <Box between={3}>
+                  <Text bold size="medium">Median household income</Text>
+                  <Text bold size="large">100,000k</Text>
+                  <Text bold size="medium">Segmentation by types</Text>
+                  <ProgressChart percent="60"/>
+                  <Text bold size="medium">Median price</Text>
+                  <VerticalChart />
+                </Box>
               </div>
               )
             }

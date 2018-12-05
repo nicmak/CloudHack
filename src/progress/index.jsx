@@ -9,7 +9,13 @@ class ProgressChart extends React.Component {
         };
     }
     render() {
-        return (<Line percent={this.state.percent} strokeWidth="4" strokeColor="#283255"/>)
+        return (
+            <Line 
+            percent={this.state.percent} 
+            strokeWidth="4" 
+            strokeColor="#283255"
+            trailWidth="4"
+            />)
     }
 }
 
