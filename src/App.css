@@ -113,15 +113,6 @@
   padding: 20px;
 }
 
-.progress,
-.bar-chart {
-  margin: 10px 0;
-}
-
-.progress {
-  padding: 0 10px;
-}
-
 .right-panel {
   width: 40%;
   float: right;

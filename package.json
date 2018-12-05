@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "@google/maps": "^0.5.5",
+<<<<<<< HEAD
     "d3": "^5.7.0",
     "rc-progress": "^2.2.6",
+=======
+>>>>>>> a5ccb1b069bfed94f7b4fce87c1274c6d739f778
     "@tds/core-box": "^1.0.1",
     "@tds/core-radio": "^1.1.0",
     "@tds/core-text": "^1.0.2",
