@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ReactMap from './MyMapComponent';
 import { Marker } from "react-google-maps"
+import { VerticalChart } from "./barchart";
 
 const googleMapsClient = require('@google/maps').createClient({
   key: 'AIzaSyBQh7wSDWnhc7DvtEMtAZKdgs-Idfjg4pA'
@@ -51,6 +52,9 @@ class App extends Component {
           <div className="heading" ><h1>Greater Vancouver housing stats</h1></div>
         </div>
         <div className="left-panel">
+          <div>
+            <VerticalChart/>
+          </div>
           <h3>Housing patterns</h3>
           <p>Radios to go here 2006 and 2016</p>
         </div>
