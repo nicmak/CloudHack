@@ -44,7 +44,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ReactMap renderMarkers={this.makeMarkers} />
+        <div className="header">
+          <div className="logo-container">
+            <img src="logo.svg" alt="Team Carp logo" />
+          </div>
+          <div className="heading" ><h1>Greater Vancouver housing stats</h1></div>
+        </div>
+        <div className="left-panel">
+          <h3>Housing patterns</h3>
+          <p>Radios to go here 2006 and 2016</p>
+        </div>
+        <div className="right-panel">
+          <div className="map-container">
+            <ReactMap renderMarkers={this.makeMarkers} />
+          </div>
+        </div>
       </div>
     );
   }

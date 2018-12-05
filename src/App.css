@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -7,15 +9,25 @@
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+  padding: 30px 20px;
+  background-color: #000000;
+}
+
+.header h1 {
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.left-panel {
+  width: 60%;
+  float: left;
+}
+
+.right-panel {
+  width: 40%;
+  float: right;
 }
 
 .App-link {
