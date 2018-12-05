@@ -25,6 +25,11 @@
   float: left;
 }
 
+.progress,
+.bar-chart {
+  margin: 10px 0;
+}
+
 .right-panel {
   width: 40%;
   float: right;

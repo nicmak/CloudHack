@@ -53,11 +53,14 @@ class App extends Component {
           <div className="heading" ><h1>Greater Vancouver housing stats</h1></div>
         </div>
         <div className="left-panel">
-          <div>
-            <ProgressChart percent="60"/>
-          </div>
           <h3>Housing patterns</h3>
           <p>Radios to go here 2006 and 2016</p>
+          <div className="progress">
+            <ProgressChart percent="60"/>
+          </div>
+          <div className="bar-chart">
+            <VerticalChart />
+          </div>
         </div>
         <div className="right-panel">
           <div className="map-container">

@@ -1,5 +1,4 @@
 import React from 'react';
-import { BarChart} from 'react-easy-chart';
 import { Line } from 'rc-progress';
 
 class VerticalChart extends React.Component {
@@ -10,7 +9,7 @@ class VerticalChart extends React.Component {
         };
     }
     render() {
-        return (<Line percent={this.state.percent} strokeWidth="10" strokeColor="#283255"/>)
+        return (<Line percent={this.state.percent} strokeWidth="4" strokeColor="#283255"/>)
     }
 }
 
