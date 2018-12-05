@@ -28,6 +28,49 @@
   height: 36px;
 }
 
+.tabs {
+  border: 1px solid #283255;
+  border-radius: 3px;
+  width: 400px;
+  clear: both;
+  margin-bottom: 20px;
+  height: 35px;
+  overflow: hidden;
+}
+
+.tab-label {
+  text-align: center;
+  width: 190px;
+  padding: 5px;
+  float: left;
+  height: 26px;
+}
+
+.tab-label p {
+  padding: 3px 0;
+  margin: 0;
+}
+
+.one-year-label {
+  background-color: #fff;
+}
+
+.one-year-label.oneYear {
+  background-color: #283255;
+}
+
+.one-year-label.oneYear p {
+  color: #fff;
+}
+
+.trends-label.trends {
+  background-color: #283255;
+}
+
+.trends-label.trends p {
+  color: #fff;
+}
+
 .header {
   padding: 30px 20px;
   background-color: #283255;
