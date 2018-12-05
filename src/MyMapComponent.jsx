@@ -38,9 +38,9 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
     onMouseEnter={() => console.log('Vancouver Color Change')}
   />
   <KmlLayer
-    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/w_vanancouver.kml"
+    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/w_vancouver.kml"
     options={{ preserveViewport: true }}
-    onClick={() => console.log('Burnaby')}
+    onClick={() => console.log('West Vancouver')}
     onMouseEnter={() => console.log('W Vancouver Color Change')}
   />
   </GoogleMap>
