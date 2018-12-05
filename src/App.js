@@ -53,7 +53,7 @@ class App extends Component {
         </div>
         <div className="left-panel">
           <div>
-            <VerticalChart/>
+            <VerticalChart percent="60"/>
           </div>
           <h3>Housing patterns</h3>
           <p>Radios to go here 2006 and 2016</p>

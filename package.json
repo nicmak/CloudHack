@@ -5,6 +5,7 @@
   "dependencies": {
     "@google/maps": "^0.5.5",
     "d3": "^5.7.0",
+    "rc-progress": "^2.2.6",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-easy-chart": "^1.0.0",
