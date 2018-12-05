@@ -71,6 +71,11 @@
   color: #fff;
 }
 
+.harper img {
+  margin: 20px 0;
+  width: 100%;
+}
+
 .header {
   padding: 30px 20px;
   background-color: #283255;

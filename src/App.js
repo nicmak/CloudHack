@@ -82,38 +82,51 @@ class App extends Component {
             </div>
             <h3>Housing patterns</h3>
             <p>Select a year to see a dataset:</p>
-            <Box tag="fieldset" between={2}>
-              <legend>
-                <Text bold size="medium">
-                  View the data for:
-                </Text>
-              </legend>
-              <Radio
-                label="2006"
-                name="years"
-                value="2006"
-                checked={this.state.year === '2006'}
-                onChange={this.setChoice}
-              />
-              <Radio
-                label="2016"
-                name="years"
-                value="2016"
-                checked={this.state.year === '2016'}
-                onChange={this.setChoice}
-              />
-            </Box>
             {this.state.activeClick === "oneYear" && (
             <div>
-              {this.state.year === "2006" && 
+              <Box tag="fieldset" between={2}>
+                <legend>
+                  <Text bold size="medium">
+                    View the data for:
+                  </Text>
+                </legend>
+                <Radio
+                  label="2006"
+                  name="years"
+                  value="2006"
+                  checked={this.state.year === '2006'}
+                  onChange={this.setChoice}
+                />
+                <Radio
+                  label="2011"
+                  name="years"
+                  value="2011"
+                  checked={this.state.year === '2011'}
+                  onChange={this.setChoice}
+                />
+                <Radio
+                  label="2016"
+                  name="years"
+                  value="2016"
+                  checked={this.state.year === '2016'}
+                  onChange={this.setChoice}
+                />
+              </Box>
+              <div>
+                {this.state.year === "2006" && 
+                  (<div>
+                  <p>Data to go here for 2006</p>
+                </div>)
+                }
+                {this.state.year === "2011" && 
+                (<div className="harper">
+                  <img src="because-harper.png" alt=""/>
+                </div>)}
+                {this.state.year === "2016" && 
                 (<div>
-                <p>Data to go here for 2006</p>
-              </div>)
-              }
-              {this.state.year === "2016" && 
-              (<div>
-                <p>Data to go here  for 2016</p>
-              </div>)}
+                  <p>Data to go here  for 2016</p>
+                </div>)}
+              </div>
             </div>)
             }
             {this.state.activeClick === "trends" && (
