@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -10,19 +10,112 @@
 }
 
 .header {
+  height: 55px;
+}
+
+.heading {
+  width: 80%;
+  float: left;
+}
+
+.logo-container {
+  width: 45px;
+  float: left;
+}
+
+.logo-container img {
+  width: 36px;
+  height: 36px;
+}
+
+.tabs {
+  border: 1px solid #283255;
+  border-radius: 3px;
+  width: 400px;
+  clear: both;
+  margin-bottom: 20px;
+  height: 35px;
+  overflow: hidden;
+}
+
+.tab-label {
+  text-align: center;
+  width: 190px;
+  padding: 5px;
+  float: left;
+  height: 26px;
+}
+
+.tab-label p {
+  padding: 3px 0;
+  margin: 0;
+}
+
+.one-year-label {
+  background-color: #fff;
+}
+
+.one-year-label.oneYear {
+  background-color: #283255;
+}
+
+.one-year-label.oneYear p {
+  color: #fff;
+}
+
+.trends-label.trends {
+  background-color: #283255;
+}
+
+.trends-label.trends p {
+  color: #fff;
+}
+
+.harper img {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.header {
   padding: 30px 20px;
-  background-color: #000000;
+  background-color: #283255;
 }
 
 .header h1 {
   color: #ffffff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
+  font-size: 36px;
+  padding: 0;
+  margin: 0;
+}
+
+.header p {
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+.header hr {
+  color: #ffffff;
+  width: 140px;
+  clear: both;
+  float: left;
+  margin: 5px 0;
 }
 
 .left-panel {
   width: 60%;
   float: left;
+  text-align: left;
+}
+
+.padder {
+  padding: 20px;
 }
 
 .right-panel {
