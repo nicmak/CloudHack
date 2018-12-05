@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@google/maps": "^0.5.5",
+    "@tds/core-box": "^1.0.1",
+    "@tds/core-radio": "^1.1.0",
+    "@tds/core-text": "^1.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-google-maps": "^9.4.5",

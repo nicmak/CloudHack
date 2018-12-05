@@ -10,8 +10,8 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <KmlLayer
     url="http://wroms.whiterockcity.ca/opendata/GIS/Data/Spatial/Other/KML/GVRD.kmz"
     options={{ preserveViewport: true }}
-    onClick={() => console.log('shit')}
-    onMouseEnter={() => console.log('hover shit')}
+    onClick={() => console.log('click on kml')}
+    onMouseEnter={() => console.log('hover on kml')}
    />
   </GoogleMap>
 ))
