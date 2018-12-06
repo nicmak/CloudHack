@@ -84,10 +84,39 @@ class App extends Component {
             <p>Select a year to see a dataset:</p>
             {this.state.activeClick === "oneYear" && (
             <div>
+              <Box tag="fieldset" between={2}>
+                <legend>
+                  <Text bold size="medium">
+                    View the data for:
+                  </Text>
+                </legend>
+                <Radio
+                  label="2006"
+                  name="years"
+                  value="2006"
+                  checked={this.state.year === '2006'}
+                  onChange={this.setChoice}
+                />
+                <Radio
+                  label="2011"
+                  name="years"
+                  value="2011"
+                  checked={this.state.year === '2011'}
+                  onChange={this.setChoice}
+                />
+                <Radio
+                  label="2016"
+                  name="years"
+                  value="2016"
+                  checked={this.state.year === '2016'}
+                  onChange={this.setChoice}
+                />
+              </Box>
               {this.state.year === "2006" && 
                 (<div className="data-panel">
+                <h3>{this.state.year}</h3>
                 <Box between={3}>
-                  <Text bold size="medium">Median household income</Text>
+                  <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
                   <Text bold size="large">100,000k</Text>
                   <Text bold size="medium">Segmentation by types</Text>
                   <ProgressChart percent="60"/>
@@ -96,10 +125,17 @@ class App extends Component {
                 </Box>
               </div>)
               }
+              {this.state.year === "2011" && 
+                (
+                <div className="harper">
+                <h3>{this.state.year}</h3>
+                  <img src="because-harper.png" alt=""/>
+                </div>)}
               {this.state.year === "2016" && 
               (<div className="data-panel">
+              <h3>{this.state.year}</h3>
                 <Box between={3}>
-                  <Text bold size="medium">Median household income</Text>
+                  <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
                   <Text bold size="large">100,000k</Text>
                   <Text bold size="medium">Segmentation by types</Text>
                   <ProgressChart percent="60"/>
@@ -112,7 +148,7 @@ class App extends Component {
             {this.state.activeClick === "trends" && (
               <div className="data-panel">
                 <Box between={3}>
-                  <Text bold size="medium">Median household income</Text>
+                  <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
                   <Text bold size="large">100,000k</Text>
                   <Text bold size="medium">Segmentation by types</Text>
                   <ProgressChart percent="60"/>
