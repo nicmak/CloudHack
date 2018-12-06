@@ -28,7 +28,6 @@
 		<ExtendedData>
 			<SchemaData schemaUrl="#kml_schema_ft_Gvrd">
 				<SimpleData name="Name">City of Burnaby</SimpleData>
-				<SimpleData name="Munnum">3</SimpleData>
 			</SchemaData>
 		</ExtendedData>
 		<gx:balloonVisibility>1</gx:balloonVisibility>
