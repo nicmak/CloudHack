@@ -23,6 +23,7 @@ class App extends Component {
     };
     this.setChoice = this.setChoice.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.whichKML = this.whichKML.bind(this);
   }
 
   testClient = () => {
@@ -58,6 +59,11 @@ class App extends Component {
   setChoice(e) {
     console.log('event', e.target.value);
     this.setState({year: e.target.value});
+  }
+
+  whichKML(city) {
+    this.setState({selectedCity: city});
+    console.log('city', this.state.selectedCity);
   }
 
   render() {
@@ -163,7 +169,7 @@ class App extends Component {
         <div className="right-panel">
           <div className="padder">
             <div className="map-container">
-              <ReactMap renderMarkers={this.makeMarkers} />
+              <ReactMap renderMarkers={this.makeMarkers} city={this.whichKML} />
             </div>
           </div>
         </div>
