@@ -19,12 +19,10 @@ class App extends Component {
     this.state = {
       addressResults: [],
       year: "2006",
-      activeClick: 'oneYear',
-      selectedCity: 'Vancouver'
+      activeClick: 'oneYear'
     };
     this.setChoice = this.setChoice.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.whichKML = this.whichKML.bind(this);
   }
 
   testClient = () => {
@@ -60,11 +58,6 @@ class App extends Component {
   setChoice(e) {
     console.log('event', e.target.value);
     this.setState({year: e.target.value});
-  }
-
-  whichKML(city) {
-    this.setState({selectedCity: city});
-    console.log('city', this.state.selectedCity);
   }
 
   render() {
@@ -119,26 +112,49 @@ class App extends Component {
                   onChange={this.setChoice}
                 />
               </Box>
-              <div>
-                {this.state.year === "2006" && 
-                  (<div>
-                  <p>Data to go here for 2006 for {this.state.selectedCity}</p>
-                </div>)
-                }
-                {this.state.year === "2011" && 
-                (<div className="harper">
+              {this.state.year === "2006" && 
+                (<div className="data-panel">
+                <h3>{this.state.year}</h3>
+                <Box between={3}>
+                  <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
+                  <Text bold size="large">100,000k</Text>
+                  <Text bold size="medium">Segmentation by types</Text>
+                  <ProgressChart percent="60"/>
+                  <Text bold size="medium">Median price</Text>
+                  <VerticalChart />
+                </Box>
+              </div>)
+              }
+              {this.state.year === "2011" && 
+                (
+                <div className="harper">
+                <h3>{this.state.year}</h3>
                   <img src="because-harper.png" alt=""/>
                 </div>)}
-                {this.state.year === "2016" && 
-                (<div>
-                  <p>Data to go here  for 2016 for {this.state.selectedCity}</p>
-                </div>)}
-              </div>
+              {this.state.year === "2016" && 
+              (<div className="data-panel">
+              <h3>{this.state.year}</h3>
+                <Box between={3}>
+                  <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
+                  <Text bold size="large">100,000k</Text>
+                  <Text bold size="medium">Segmentation by types</Text>
+                  <ProgressChart percent="60"/>
+                  <Text bold size="medium">Median price</Text>
+                  <VerticalChart />
+                </Box>
+              </div>)}
             </div>)
             }
             {this.state.activeClick === "trends" && (
-              <div>
-                <p>Trends go here for {this.state.selectedCity}!</p>
+              <div className="data-panel">
+                <Box between={3}>
+                  <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
+                  <Text bold size="large">100,000k</Text>
+                  <Text bold size="medium">Segmentation by types</Text>
+                  <ProgressChart percent="60"/>
+                  <Text bold size="medium">Median price</Text>
+                  <VerticalChart />
+                </Box>
               </div>
               )
             }
@@ -147,7 +163,7 @@ class App extends Component {
         <div className="right-panel">
           <div className="padder">
             <div className="map-container">
-              <ReactMap renderMarkers={this.makeMarkers} city={this.whichKML} />
+              <ReactMap renderMarkers={this.makeMarkers} />
             </div>
           </div>
         </div>
