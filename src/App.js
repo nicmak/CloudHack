@@ -82,27 +82,6 @@ class App extends Component {
             </div>
             <h3>Housing patterns</h3>
             <p>Select a year to see a dataset:</p>
-            <Box tag="fieldset" between={2}>
-              <legend>
-                <Text bold size="medium">
-                  View the data for:
-                </Text>
-              </legend>
-              <Radio
-                label="2006"
-                name="years"
-                value="2006"
-                checked={this.state.year === '2006'}
-                onChange={this.setChoice}
-              />
-              <Radio
-                label="2016"
-                name="years"
-                value="2016"
-                checked={this.state.year === '2016'}
-                onChange={this.setChoice}
-              />
-            </Box>
             {this.state.activeClick === "oneYear" && (
             <div>
               {this.state.year === "2006" && 

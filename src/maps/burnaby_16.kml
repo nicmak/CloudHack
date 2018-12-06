@@ -11,7 +11,7 @@
 			<color>ff005400</color>
 		</LineStyle>
 		<PolyStyle>
-			<color>7f7eff00</color>
+			<color>bdc9e100</color>
 		</PolyStyle>
 	</Style>
 	<Placemark id="kml_15">
@@ -28,7 +28,6 @@
 		<ExtendedData>
 			<SchemaData schemaUrl="#kml_schema_ft_Gvrd">
 				<SimpleData name="Name">City of Burnaby</SimpleData>
-				<SimpleData name="Munnum">3</SimpleData>
 			</SchemaData>
 		</ExtendedData>
 		<gx:balloonVisibility>1</gx:balloonVisibility>
