@@ -7,38 +7,39 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
     defaultZoom={8}
     defaultCenter={{ lat: 49.2832844, lng : -123.1248047}}
   >
+
   <KmlLayer
-    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/burnaby.kml"
+    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/burnaby_16.kml"
     options={{ preserveViewport: true }}
     onClick={() => props.city('Burnaby')}
     onMouseEnter={() => console.log('Burnaby Color Change')}
    />
   <KmlLayer
-    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/n_van1.kml"
+    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/n_van1_16.kml"
     options={{ preserveViewport: true }}
     onClick={() => props.city('North Van1')}
     onMouseEnter={() => console.log('N Van Color Change')}
   />
   <KmlLayer
-    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/n_van2.kml"
+    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/n_van2_16.kml"
     options={{ preserveViewport: true }}
     onClick={() => props.city('North Van2')}
     onMouseEnter={() => console.log('N Van 2 Color Change')}
    />
   <KmlLayer
-    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/richmond.kml"
+    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/richmond_16.kml"
     options={{ preserveViewport: true }}
     onClick={() => props.city('Richmond')}
     onMouseEnter={() => console.log('Richmond Color Change')}
   />
   <KmlLayer
-    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/vancouver.kml"
+    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/vancouver_16.kml"
     options={{ preserveViewport: true }}
     onClick={() => props.city('Vancouver')}
     onMouseEnter={() => console.log('Vancouver Color Change')}
   />
   <KmlLayer
-    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/w_vancouver.kml"
+    url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/w_vancouver_16.kml"
     options={{ preserveViewport: true }}
     onClick={() => props.city('West Vancouver')}
     onMouseEnter={() => console.log('W Vancouver Color Change')}
