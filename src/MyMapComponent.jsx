@@ -10,43 +10,49 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/burnaby.kml"
     options={{ preserveViewport: true }}
-    onClick={() => console.log('Burnaby')}
+    onClick={() => props.city('Burnaby')}
     onMouseEnter={() => console.log('Burnaby Color Change')}
    />
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/n_van1.kml"
     options={{ preserveViewport: true }}
-    onClick={() => console.log('North Van1')}
+    onClick={() => props.city('North Van1')}
     onMouseEnter={() => console.log('N Van Color Change')}
   />
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/n_van2.kml"
     options={{ preserveViewport: true }}
-    onClick={() => console.log('North Van2')}
+    onClick={() => props.city('North Van2')}
     onMouseEnter={() => console.log('N Van 2 Color Change')}
    />
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/richmond.kml"
     options={{ preserveViewport: true }}
-    onClick={() => console.log('Richmond')}
+    onClick={() => props.city('Richmond')}
     onMouseEnter={() => console.log('Richmond Color Change')}
   />
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/vancouver.kml"
     options={{ preserveViewport: true }}
-    onClick={() => console.log('Vancouver')}
+    onClick={() => props.city('Vancouver')}
     onMouseEnter={() => console.log('Vancouver Color Change')}
   />
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/w_vancouver.kml"
     options={{ preserveViewport: true }}
-    onClick={() => console.log('West Vancouver')}
+    onClick={() => props.city('West Vancouver')}
     onMouseEnter={() => console.log('W Vancouver Color Change')}
   />
   </GoogleMap>
 ))
 
 class ReactMap extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      city: "Vancouver"
+    }
+  }
   render() {
     return (
       <MyMapComponent
@@ -56,6 +62,7 @@ class ReactMap extends React.Component {
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `400px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
+        city={this.props.city}
       />
     )
   }

@@ -19,10 +19,12 @@ class App extends Component {
     this.state = {
       addressResults: [],
       year: "2006",
-      activeClick: 'oneYear'
+      activeClick: 'oneYear',
+      selectedCity: 'Vancouver'
     };
     this.setChoice = this.setChoice.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.whichKML = this.whichKML.bind(this);
   }
 
   testClient = () => {
@@ -58,6 +60,11 @@ class App extends Component {
   setChoice(e) {
     console.log('event', e.target.value);
     this.setState({year: e.target.value});
+  }
+
+  whichKML(city) {
+    this.setState({selectedCity: city});
+    console.log('city', this.state.selectedCity);
   }
 
   render() {
@@ -115,7 +122,7 @@ class App extends Component {
               <div>
                 {this.state.year === "2006" && 
                   (<div>
-                  <p>Data to go here for 2006</p>
+                  <p>Data to go here for 2006 for {this.state.selectedCity}</p>
                 </div>)
                 }
                 {this.state.year === "2011" && 
@@ -124,14 +131,14 @@ class App extends Component {
                 </div>)}
                 {this.state.year === "2016" && 
                 (<div>
-                  <p>Data to go here  for 2016</p>
+                  <p>Data to go here  for 2016 for {this.state.selectedCity}</p>
                 </div>)}
               </div>
             </div>)
             }
             {this.state.activeClick === "trends" && (
               <div>
-                <p>Trends go here!</p>
+                <p>Trends go here for {this.state.selectedCity}!</p>
               </div>
               )
             }
@@ -140,7 +147,7 @@ class App extends Component {
         <div className="right-panel">
           <div className="padder">
             <div className="map-container">
-              <ReactMap renderMarkers={this.makeMarkers} />
+              <ReactMap renderMarkers={this.makeMarkers} city={this.whichKML} />
             </div>
           </div>
         </div>
