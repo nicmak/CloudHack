@@ -1,0 +1,47 @@
+{
+  "Vancouver": {
+    "medianIncomeHouseHolds": { "2006": 58805 , "2011": 0,  "2016": 64737},
+    "numberOfRentDwells": { "2006": 131535, "2011": 0, "2016": 150750},
+    "numberOfOwnDwells": { "2006": 121850, "2011": 0, "2016": 133165 },
+    "DwellSegementRental": { "2006": 52, "2011": 0, "2016": 53 },
+    "DwellSegementOwner": { "2006": 48, "2011": 0, "2016": 47 },
+    "medianMonthlyRentalPayment": { "2006": 825, "2011":0, "2016": 1206},
+    "medianMonthlyMorgagePayment": { "2006": 958, "2011": 0, "2016": 1306}
+  },
+  "North-Vancouver": {
+    "medianIncomeHouseHolds": { "2006": 61857 , "2011": 0,  "2016": 80838},
+    "numberOfRentDwells": { "2006": 9830, "2011": 0, "2016": 16440},
+    "numberOfOwnDwells": { "2006": 11515, "2011": 0, "2016": 30710 },
+    "DwellSegementRental": { "2006": 46, "2011": 0, "2016": 35 },
+    "DwellSegementOwner": { "2006": 54, "2011": 0, "2016": 65 },
+    "medianMonthlyRentalPayment": { "2006": 858, "2011":0, "2016": 1223},
+    "medianMonthlyMorgagePayment": { "2006": 1112, "2011": 0, "2016": 1381}
+  },
+  "West-Vancouver": {
+    "medianIncomeHouseHolds": { "2006": 101963 , "2011": 0,  "2016": 89808},
+    "numberOfRentDwells": { "2006": 3905, "2011": 0, "2016": 4260},
+    "numberOfOwnDwells": { "2006": 12930, "2011": 0, "2016": 12675 },
+    "DwellSegementRental": { "2006": 23, "2011": 0, "2016": 25 },
+    "DwellSegementOwner": { "2006": 77, "2011": 0, "2016": 75 },
+    "medianMonthlyRentalPayment": { "2006": 1123, "2011":0, "2016": 1589},
+    "medianMonthlyMorgagePayment": { "2006": 889, "2011": 0, "2016": 1352}
+  },
+  "Burnaby": {
+    "medianIncomeHouseHolds": { "2006": 57248 , "2011": 0,  "2016": 64737},
+    "numberOfRentDwells": { "2006": 30055, "2011": 0, "2016": 34980},
+    "numberOfOwnDwells": { "2006": 47980, "2011": 0, "2016": 57220 },
+    "DwellSegementRental": { "2006": 39, "2011": 0, "2016": 38 },
+    "DwellSegementOwner": { "2006": 61, "2011": 0, "2016": 62 },
+    "medianMonthlyRentalPayment": { "2006": 801, "2011":0, "2016": 1100},
+    "medianMonthlyMorgagePayment": { "2006": 809, "2011": 0, "2016": 1208}
+  },
+  "Richmond": {
+    "medianIncomeHouseHolds": { "2006": 56285 , "2011": 0,  "2016": 65241},
+    "numberOfRentDwells": { "2006": 14545, "2011": 0, "2016": 18910},
+    "numberOfOwnDwells": { "2006": 46890, "2011": 0, "2016": 54545 },
+    "DwellSegementRental": { "2006": 24, "2011": 0, "2016": 26 },
+    "DwellSegementOwner": { "2006": 76, "2011": 0, "2016": 74 },
+    "medianMonthlyRentalPayment": { "2006": 928, "2011":0, "2016": 1275},
+    "medianMonthlyMorgagePayment": { "2006": 903, "2011": 0, "2016": 1203}
+  }
+}
