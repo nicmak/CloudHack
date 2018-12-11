@@ -7,6 +7,7 @@ import Text from '@tds/core-text';
 import { Marker } from "react-google-maps"
 import ProgressChart from "./progress";
 import VerticalChart from './barchart';
+import data from './incomeData/data.json';
 
 const googleMapsClient = require('@google/maps').createClient({
   key: 'AIzaSyBQh7wSDWnhc7DvtEMtAZKdgs-Idfjg4pA'
@@ -19,7 +20,8 @@ class App extends Component {
     this.state = {
       addressResults: [],
       year: "2006",
-      activeClick: 'oneYear'
+      activeClick: 'oneYear',
+      selectedCity: 'Vancouver'
     };
     this.setChoice = this.setChoice.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -122,12 +124,13 @@ class App extends Component {
                 (<div className="data-panel">
                 <h3>{this.state.year}</h3>
                 <Box between={3}>
-                  <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
-                  <Text bold size="large">100,000k</Text>
-                  <Text bold size="medium">Segmentation by types</Text>
-                  <ProgressChart percent="60"/>
-                  <Text bold size="medium">Median price</Text>
-                  <VerticalChart />
+                <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
+              <Text bold size="large">${data[this.state.selectedCity].medianIncomeHouseHolds[this.state.year]}</Text>
+              <Text bold size="medium">Segmentation by types</Text>
+              <ProgressChart percent={`${data[this.state.selectedCity].DwellSegementRental[this.state.year]}`} />
+              <Text bold size="medium">Median monthly mortgage payment</Text>
+              <Text bold size="large">${data[this.state.selectedCity].medianMonthlyMorgagePayment[this.state.year]}</Text>
+              <VerticalChart owned={`${data[this.state.selectedCity].medianMonthlyRentalPayment[this.state.year]}`} rented={`${data[this.state.selectedCity].DwellSegementRental[this.state.year]}`} />
                 </Box>
               </div>)
               }
@@ -141,25 +144,27 @@ class App extends Component {
               (<div className="data-panel">
               <h3>{this.state.year}</h3>
                 <Box between={3}>
-                  <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
-                  <Text bold size="large">100,000k</Text>
-                  <Text bold size="medium">Segmentation by types</Text>
-                  <ProgressChart percent="60"/>
-                  <Text bold size="medium">Median price</Text>
-                  <VerticalChart />
+                <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
+              <Text bold size="large">${data[this.state.selectedCity].medianIncomeHouseHolds[this.state.year]}</Text>
+              <Text bold size="medium">Segmentation by types</Text>
+              <ProgressChart percent={`${data[this.state.selectedCity].DwellSegementRental[this.state.year]}`} />
+              <Text bold size="medium">Median monthly mortgage payment</Text>
+              <Text bold size="large">${data[this.state.selectedCity].medianMonthlyMorgagePayment[this.state.year]}</Text>
+              <VerticalChart owned={data[this.state.selectedCity].DwellSegementOwner[this.state.year]} rented={data[this.state.selectedCity].DwellSegementRental[this.state.year]} />
                 </Box>
               </div>)}
             </div>)
             }
             {this.state.activeClick === "trends" && (
-              <div className="data-panel">
-                <Box between={3}>
-                  <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
-                  <Text bold size="large">100,000k</Text>
-                  <Text bold size="medium">Segmentation by types</Text>
-                  <ProgressChart percent="60"/>
-                  <Text bold size="medium">Median price</Text>
-                  <VerticalChart />
+            <div>
+              <Box between={3}>
+                <Text bold size="medium">Median household income in {this.state.selectedCity}</Text>
+              <Text bold size="large">${data[this.state.selectedCity].medianIncomeHouseHolds[this.state.year]}</Text>
+              <Text bold size="medium">Segmentation by types</Text>
+              <ProgressChart percent={`${data[this.state.selectedCity].DwellSegementRental[this.state.year]}`} />
+              <Text bold size="medium">Median monthly mortgage payment</Text>
+              <Text bold size="large">${data[this.state.selectedCity].medianMonthlyMorgagePayment[this.state.year]}</Text>
+              <VerticalChart owned={data[this.state.selectedCity].DwellSegementOwner[this.state.year]} rented={data[this.state.selectedCity].DwellSegementRental[this.state.year]} />
                 </Box>
               </div>
               )

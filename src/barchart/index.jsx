@@ -5,10 +5,11 @@ class VerticalChart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-           
+           owned: props.owned,
+           rented: props.rented
         };
     }
-    
+
     render() {
         return (
             <BarChart 
@@ -17,8 +18,8 @@ class VerticalChart extends React.Component {
             axisLabels={{x: 'Occupancy', y: 'Cost'}}
             axes
             data= {[
-                {x: 'Owned', y: 900, color: '#283255'},
-                {x: 'Rented', y: 1200, color: 'rgba(40,50,85,0.50)'},
+                {x: 'Owned', y: this.state.owned, color: '#283255'},
+                {x: 'Rented', y: this.state.rented, color: 'rgba(40,50,85,0.50)'},
             ]}
         />)
     }

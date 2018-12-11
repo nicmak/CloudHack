@@ -16,13 +16,13 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/n_van1.kml"
     options={{ preserveViewport: true }}
-    onClick={() => props.city('North Van1')}
+    onClick={() => props.city('North-Vancouver')}
     onMouseEnter={() => console.log('N Van Color Change')}
   />
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/n_van2.kml"
     options={{ preserveViewport: true }}
-    onClick={() => props.city('North Van2')}
+    onClick={() => props.city('North-Vancouver')}
     onMouseEnter={() => console.log('N Van 2 Color Change')}
    />
   <KmlLayer
@@ -40,7 +40,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <KmlLayer
     url="https://raw.githubusercontent.com/nicmak/CloudHack/master/src/maps/w_vancouver.kml"
     options={{ preserveViewport: true }}
-    onClick={() => props.city('West Vancouver')}
+    onClick={() => props.city('West-Vancouver')}
     onMouseEnter={() => console.log('W Vancouver Color Change')}
   />
   </GoogleMap>
